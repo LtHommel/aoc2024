@@ -1,6 +1,6 @@
 # TIL
 ## Day 1
-- `split()` zonder argument splitst op whitspace
+- `split()` zonder argument splitst op whitespace
 - met `tuple()` kun je de output van `zip()` printbaar maken
 
 ## Day 2
