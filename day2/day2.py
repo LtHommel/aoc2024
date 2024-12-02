@@ -19,7 +19,7 @@ def safe_afterall(report):
 part1 = part2 = 0
 
 for line in data:
-    report = list(map(int, line.split()))
+    report = [int(n) for n in line.split()]
     if safe(report):
         part1 += 1
         part2 += 1
