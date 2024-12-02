@@ -20,5 +20,5 @@ for l, r in zip(left, right):
     part1 += abs(l - r)
     part2 += l * right.count(l)
 
-print(part1)
-print(part2)
+print('part1: ', part1)
+print('part2: ', part2)
