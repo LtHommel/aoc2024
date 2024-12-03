@@ -1,5 +1,5 @@
-# data = open('example.txt').readlines()
-data = open('input.txt').readlines()
+# data = open('example2.txt').readlines()
+data = open('input2.txt').readlines()
 
 def safe(report):
     delta = []

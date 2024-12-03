@@ -1,5 +1,5 @@
-# data = open('example.txt').readlines()
-data = open('input.txt').readlines()
+# data = open('example1.txt').readlines()
+data = open('input1.txt').readlines()
 
 left = []
 right = []
