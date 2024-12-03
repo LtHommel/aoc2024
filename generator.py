@@ -22,6 +22,9 @@ def generate_boilerplate(day):
 
     print(f"Python file '{filename}' has been created from the template '{TEMPLATE_FILE}'.")
 
+    examplefilename = f'day{day}/example{day}.py'
+    open(examplefilename, 'a').close()
+    print(f"Text file '{examplefilename}' has been created.")
 
 
 def download_input(day):
