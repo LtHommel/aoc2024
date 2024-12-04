@@ -22,7 +22,7 @@ def generate_boilerplate(day):
 
     print(f"Python file '{filename}' has been created from the template '{TEMPLATE_FILE}'.")
 
-    examplefilename = f'day{day}/example{day}.py'
+    examplefilename = f'day{day}/example{day}.txt'
     open(examplefilename, 'a').close()
     print(f"Text file '{examplefilename}' has been created.")
 
