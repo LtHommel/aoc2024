@@ -10,7 +10,7 @@ num_cols = len(data[0])
 num_rows = len(data)
 cols = ['' for _ in range(num_cols)]
 rows = ['' for _ in range(num_rows)]
-fw_diagonals = ['' for _ in range(num_rows + num_cols - 1)]
+fw_diagonals = ['' for _ in range(num_rows + num_cols - 1)] # je kunt een _ gebruiken in plaats van een variabelenaam als je er niet meer naar refereert
 bw_diagonals = ['' for _ in range(len(fw_diagonals))]
 offset_bw_diagonals = -num_rows + 1
 

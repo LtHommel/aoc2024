@@ -1,5 +1,22 @@
 # TIL
 
+## 7 december
+
+
+## 6 december
+- als je een datastructuur waar je over itereert wrapt in `enumerate()` krijg je een index erbij als eerste waarde, bijv `for i, line in enumerate(data):`
+
+## 5 december
+- sets and dicts
+  - beiden worden met curly braces aangegeven. `{}` creeert een lege dict. Lege set nodig? `set()`
+- dicts
+  - een structuur met key value paren is een dict
+  - er is ook een defaultdict. De constructor kun je een type meegeven en dat krijg je dan terug als je een key opvraagt die er niet is. Bijv: `rule_dict = defaultdict(set)`. In werkelijkheid wordt de niet bestaande key aangemaakt, met een lege of default waarde van het gespecificeerde type, wanneer je 'm opvraagt.
+- als je een argument aan een variabele toewijst creeer je een pointer. Als je de waarde bewerkt is dit dus niet veilig! Dit moet ik trouwens nog oplossen in de code van vandaag.
+
+## 4 december
+Je kunt een variabele `_` noemen als de waarde genegeerd wordt. Bijv: `['' for _ in range(num_rows + num_cols - 1)]`
+
 ## 3 december
 
 Regexdag!
