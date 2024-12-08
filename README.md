@@ -1,8 +1,12 @@
 # TIL
 
+## 8 december
+- imports van de vorm `from file import function` werken niet met een `-` in de bestandsnaam.
+- `part1 = part2 = 0` werkt prima, maar `part1 = part2 = set()` niet. Meer algemeen geldt dat je dit wel zo kan doen voor primitieve types (int, float, bool, str), omdat ze immutable zijn, en voor andere types niet.
+
 ## 7 december
-- lekker gespeeld met de libraries treelib en binarytree. Ik ben zeer te spreken over de api van binarytree, lekker simpel én compleet. Wel een beperkte usecase natuurlijk, dus mijn vreugde was groot toen treelib bleek te bestaan. 
-- vooral geleerd dat ik beter moet nadenken over welk soort oplossing voor welk probleem. Waar ik eerder van de week de mist in ging met een recursieve oplossing die niet op de stack paste, had ik hier wel die route kunnen (en moeten, denk ik) nemen.
+- lekker gespeeld met de libraries treelib en binarytree. Ik ben zeer te spreken over de api van binarytree, lekker simpel én compleet. Wel een beperkte usecase natuurlijk, dus mijn vreugde was groot toen treelib ook bleek te bestaan. 
+- vooral geleerd dat ik beter moet nadenken over welk soort oplossing voor welk probleem. Waar ik eerder van de week de mist in ging met een recursieve oplossing die niet in memory paste, had ik hier wel die route kunnen (en moeten, denk ik) nemen.
 
 ## 6 december
 - als je een datastructuur waar je over itereert wrapt in `enumerate()` krijg je een index erbij als eerste waarde, bijv `for i, line in enumerate(data):`
