@@ -1,5 +1,6 @@
-data = open('example{day}.txt').readlines()
-# data = open('input{day}.txt').readlines()
+input = 'example{day}.txt'
+# input = 'input{day}.txt'
+data = [line.strip() for line in open(input).readlines()]
 
 part1 = part2 = 0
 
