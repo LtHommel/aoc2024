@@ -28,6 +28,14 @@ def get_grid_value(x, y, grid):
         return None
     return grid[y][x]
 
+# TODO swap x and y
+def on_grid(pos, grid_size):
+    """
+    :param pos: tuple of form (y,x)
+    :param grid_size: tuple of form (width, height)
+    :return: True if the position lies within the grid, False otherwise.
+    """
+    return 0 <= pos[0] < grid_size[1] and 0 <= pos[1] < grid_size[0]
 
 class Direction(Enum):
     UP = 1
