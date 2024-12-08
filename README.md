@@ -3,6 +3,7 @@
 ## 8 december
 - imports van de vorm `from file import function` werken niet met een `-` in de bestandsnaam.
 - `part1 = part2 = 0` werkt prima, maar `part1 = part2 = set()` niet. Meer algemeen geldt dat je dit wel zo kan doen voor primitieve types (int, float, bool, str), omdat ze immutable zijn, en voor andere types niet.
+- gecompileerde code wordt opgeslagen in een folder genaamd `__pycache__` voor verbeterde performance bij herhaaldelijk runnen van dezelfde code. Als programmeur hoef je je niks van deze bestanden aan te trekken, en PyCharm verbergt ze dan ook automatisch. Deze folder wil je niet in vcs.
 
 ## 7 december
 - lekker gespeeld met de libraries treelib en binarytree. Ik ben zeer te spreken over de api van binarytree, lekker simpel én compleet. Wel een beperkte usecase natuurlijk, dus mijn vreugde was groot toen treelib ook bleek te bestaan. 
