@@ -8,7 +8,6 @@ from util.tuple_arithmetics import tup_add, tup_sub
 input = 'input8.txt'
 data = [line.strip() for line in open(input).readlines()]
 
-grid_size = (len(data), len(data[0]))
 
 part1, part2 = set(), set()
 
@@ -22,7 +21,7 @@ for entry in antennas.values():
     print('entry', entry)
     for a, b in permutations(entry, 2):  # time saver!
         antinode = (tup_add(a, tup_sub(a, b)))
-        if on_grid(antinode, grid_size):
+        if on_grid(antinode, data):
             part1.add(antinode)
     print(part1)
 

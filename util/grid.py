@@ -1,7 +1,9 @@
 from enum import Enum
 
+from util.tuple_arithmetics import tup_add
 
-def get_surroundings(x,y, grid):
+
+def get_surroundings(x, y, grid):
     """
     :param x: x index of position we are looking at
     :param y: y index of position we are looking at
@@ -12,14 +14,14 @@ def get_surroundings(x,y, grid):
         | 5 |  6  | 7 |
       Value is None when neighbor does not exist.
     """
-    return [get_grid_value(x-1, y-1, grid),
-            get_grid_value(x,   y-1  , grid),
-            get_grid_value(x+1, y-1, grid),
-            get_grid_value(x-1, y,   grid),
-            get_grid_value(x+1, y,   grid),
-            get_grid_value(x-1, y+1, grid),
-            get_grid_value(x,   y+1,   grid),
-            get_grid_value(x+1, y+1, grid),
+    return [get_grid_value(x - 1, y - 1, grid),
+            get_grid_value(x, y - 1, grid),
+            get_grid_value(x + 1, y - 1, grid),
+            get_grid_value(x - 1, y, grid),
+            get_grid_value(x + 1, y, grid),
+            get_grid_value(x - 1, y + 1, grid),
+            get_grid_value(x, y + 1, grid),
+            get_grid_value(x + 1, y + 1, grid),
             ]
 
 
@@ -28,14 +30,27 @@ def get_grid_value(x, y, grid):
         return None
     return grid[y][x]
 
-# TODO swap x and y
-def on_grid(pos, grid_size):
+
+def get_neighbors(pos, grid):
     """
-    :param pos: tuple of form (y,x)
-    :param grid_size: tuple of form (width, height)
+    returns the positions of direct neighbors, that is up, down, left, and right neighbors and no diagonals, if they are located on the grid
+   
+    :param pos: tuple (row, col) of the position whose neighbors we are after
+    :param grid: the grid to plot the positions on
+    :return: a list of tuples (row, col) the neighbors' positions
+    """
+    return [neighbor for direction in Direction if
+            (neighbor := tup_add(pos, Direction.step_offset(direction))) and on_grid(neighbor, grid)]
+
+
+def on_grid(pos, grid):
+    """
+    :param pos: tuple of form (row,col)
+    :param grid: the grid
     :return: True if the position lies within the grid, False otherwise.
     """
-    return 0 <= pos[0] < grid_size[1] and 0 <= pos[1] < grid_size[0]
+    return 0 <= pos[0] < len(grid[0]) and 0 <= pos[1] < len(grid)
+
 
 class Direction(Enum):
     UP = 1
