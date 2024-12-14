@@ -1,5 +1,8 @@
 # TIL
 
+## 14 december
+- list multiplication om een lijst te initialiseren `quadrants = [0] * 4`
+
 ## 13 december
 - hoe zat het ook alweer met die stelsels van lineaire vergelijkingen? :)
 
