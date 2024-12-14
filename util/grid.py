@@ -33,7 +33,8 @@ def get_grid_value(x, y, grid):
 
 def get_neighbors(pos, grid):
     """
-    returns the positions of direct neighbors, that is up, down, left, and right neighbors and no diagonals, if they are located on the grid
+    returns the positions of direct neighbors,
+    that is up, down, left, and right neighbors (no diagonals), if they are located on the grid
    
     :param pos: tuple (row, col) of the position whose neighbors we are after
     :param grid: the grid to plot the positions on
@@ -50,6 +51,38 @@ def on_grid(pos, grid):
     :return: True if the position lies within the grid, False otherwise.
     """
     return 0 <= pos[0] < len(grid[0]) and 0 <= pos[1] < len(grid)
+
+
+class Compass(Enum):
+    NW = 0
+    N = 1
+    NE = 2
+    W = 3
+    E = 4
+    SW = 5
+    S = 6
+    SE = 7
+
+    @staticmethod
+    def step_offset(direction):
+        if direction == Compass.NW:
+            return -1, -1
+        elif direction == Compass.N:
+            return -1, 0
+        elif direction == Compass.NE:
+            return -1, 1
+        elif direction == Compass.W:
+            return 0, -1
+        elif direction == Compass.E:
+            return 0, 1
+        elif direction == Compass.SW:
+            return 1, -1
+        elif direction == Compass.S:
+            return 1, 0
+        elif direction == Compass.SE:
+            return 1, 1
+        else:
+            raise ValueError('direction must be NW, N, NE, W, E, SW, S, or SE')
 
 
 class Direction(Enum):

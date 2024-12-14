@@ -1,5 +1,14 @@
 # TIL
 
+## 11 december
+- decorators! In het bijzonder de decorator `@lru_caching`
+- `//` is \_\_floordiv__, dat maakt voor een deling met hele getallen niet uit, maar `/` oftewel \_\_truediv__ retourneert een float en die kun je niet gebruiken voor slicing (slicing is uit de definitieve versie van dag 11 verdwenen, maar ik ben dit wel tegengekomen)
+- ik verwachtte wel dat een `total = sum([doe_iets for item in list])` sneller zou zijn dan ```for item in list:\n\t total += doe_iets()```, maar een verschil van zo'n 3ms versus zo'n 50ms zag ik niet aankomen!
+
+## 10 december
+
+## 9 december
+
 ## 8 december
 - imports van de vorm `from file import function` werken niet met een `-` in de bestandsnaam.
 - `part1 = part2 = 0` werkt prima, maar `part1 = part2 = set()` niet. Meer algemeen geldt dat je dit wel zo kan doen voor primitieve types (int, float, bool, str), omdat ze immutable zijn, en voor andere types niet.
