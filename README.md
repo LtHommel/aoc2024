@@ -1,5 +1,11 @@
 # TIL
 
+## 13 december
+- hoe zat het ook alweer met die stelsels van lineaire vergelijkingen? :)
+
+## 12 december
+- walrus operator
+
 ## 11 december
 - decorators! In het bijzonder de decorator `@lru_caching`
 - `//` is \_\_floordiv__, dat maakt voor een deling met hele getallen niet uit, maar `/` oftewel \_\_truediv__ retourneert een float en die kun je niet gebruiken voor slicing (slicing is uit de definitieve versie van dag 11 verdwenen, maar ik ben dit wel tegengekomen)
